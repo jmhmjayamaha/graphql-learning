@@ -34,22 +34,5 @@ public class ClientResolver implements GraphQLResolver<BankAccount>{
 				,executorService);
 		
 	}
-	
- /*
-  public DataFetcherResult<Client> client(BankAccount bankAccount) {
-	  log.info("client resolver");
-	  
-	  // throw new GraphQLException("client not available"); 
-	  // throw new RuntimeException("Spring error");
-	  
-	  return DataFetcherResult.<Client> newResult() .data(Client .builder()
-		  .id(bankAccount.getId()) .firstName("harshana") .lastName("madusanka")
-		  .build()) .error(new GenericGraphQLError("could not get last name"))
-		  .build(); 
-	  // return Client.builder().id(bankAccount.getId()).firstName("harshana").lastName("madusanka").build(); // return null; 
-  
-  }
-  
-  */
 	 
 }

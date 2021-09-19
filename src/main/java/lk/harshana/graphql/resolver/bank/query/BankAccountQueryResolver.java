@@ -1,4 +1,4 @@
-package lk.harshana.graphql.resolver.bank;
+package lk.harshana.graphql.resolver.bank.query;
 
 import java.util.UUID;
 
@@ -12,7 +12,7 @@ import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
 @Component
-public class BankAccountResolver implements GraphQLQueryResolver {
+public class BankAccountQueryResolver implements GraphQLQueryResolver {
 
 	public BankAccount bankAccount(UUID id) {
 		log.info("Bank account information ");
