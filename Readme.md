@@ -1,4 +1,4 @@
 Reference document
 
-read more on : DatafetchingEnviornment. 
-https://javadoc.io/doc/com.graphql-java/graphql-java/12.0/graphql/schema/DataFetchingEnvironment.html
+read more on : Extended Scalars. 
+https://github.com/graphql-java/graphql-java-extended-scalars
