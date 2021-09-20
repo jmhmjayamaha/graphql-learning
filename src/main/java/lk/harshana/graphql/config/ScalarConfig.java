@@ -1,4 +1,4 @@
-package lk.harshana.graphql;
+package lk.harshana.graphql.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -14,4 +14,13 @@ public class ScalarConfig {
 		return ExtendedScalars.NonNegativeInt;
 	}
 
+	@Bean
+	public GraphQLScalarType date() {
+		return ExtendedScalars.Date;
+	}
+	
+	@Bean
+	public GraphQLScalarType dateTime() {
+		return ExtendedScalars.DateTime;
+	}
 }
