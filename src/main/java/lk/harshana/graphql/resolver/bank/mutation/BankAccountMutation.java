@@ -5,8 +5,10 @@ import java.time.LocalDate;
 import java.time.ZonedDateTime;
 import java.util.UUID;
 
-import org.springframework.beans.factory.annotation.Autowired;
+import javax.validation.Valid;
+
 import org.springframework.stereotype.Component;
+import org.springframework.validation.annotation.Validated;
 
 import graphql.kickstart.tools.GraphQLMutationResolver;
 import lk.harshana.graphql.domain.BankAccount;
@@ -18,11 +20,12 @@ import lombok.extern.slf4j.Slf4j;
 @Slf4j
 @Component
 @RequiredArgsConstructor
+@Validated
 public class BankAccountMutation implements GraphQLMutationResolver{
 	
 	private final Clock clock;
 
-	public BankAccount createBankAccount(CreateBankAccountInput input) {
+	public BankAccount createBankAccount(@Valid CreateBankAccountInput input) {
 		log.info("create bank account mutaion resolver");
 		
 		return BankAccount

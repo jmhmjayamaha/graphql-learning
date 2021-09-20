@@ -1,5 +1,7 @@
 package lk.harshana.graphql.exception;
 
+import javax.validation.ConstraintViolationException;
+
 import org.springframework.stereotype.Component;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 
@@ -9,8 +11,8 @@ import graphql.kickstart.spring.error.ThrowableGraphQLError;
 @Component
 public class GraphqlExceptionHandler {
 
-	@ExceptionHandler(GraphQLException.class)
-	public ThrowableGraphQLError handle(GraphQLException e) {
+	@ExceptionHandler({GraphQLException.class, ConstraintViolationException.class})
+	public ThrowableGraphQLError handle(Exception e) {
 		return new ThrowableGraphQLError(e);
 	}
 	
