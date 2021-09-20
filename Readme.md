@@ -1,4 +1,7 @@
-Reference document
+Note: 
 
-read more on : Extended Scalars. 
-https://github.com/graphql-java/graphql-java-extended-scalars
+more on hooks and listeners
+
+Reference document:
+
+https://www.graphql-java-kickstart.com/servlet/servlet-listener/
